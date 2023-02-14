@@ -774,10 +774,15 @@ color: white !important;
 #dark #courses .kursdata svg{
   color: white;
 }
-.col-lg-6 .content{
+.col-lg-6 .video{
   width: 800px;
-  height: 100%;
-margin-bottom: 300px;
+  max-height: 100%;
+ padding: 20px; 
+ background-color: silver;
+  margin-top: 100px;
+border-radius:20px;
+background-color: #e8e4e4;
+margin-bottom: 40px;
 }
 .col-lg-6 nav{
   width: 300px;
@@ -785,4 +790,40 @@ margin-bottom: 300px;
 .navbar_dashboard{
   max-width: 300px !important;
   background-color: silver;
+}
+.col-lg-6 .video iframe{
+border-radius: 20px;
+}
+#dashboard{
+  background-color: #f9f9f9;
+}
+.col-lg-6 .content{
+  margin-bottom: 300px;  
+}
+.col-lg-6 .content .desc h1{
+font-size: 60px;
+color:#5e5ed7;
+font-family: 'Changa', sans-serif;
+letter-spacing: 10px;
+}
+.col-lg-6 .content .desc h1::after{
+width: 100%;
+height: 2px;
+display: block;
+content: "";
+background-color: #0048ff;
+}
+.col-lg-6 .content .desc p{
+  color: #464646 !important;
+}
+.ID{
+  margin: 10px;
+  width: 100px;
+height: 60px;
+background-color: #5e5ed7;
+border-radius: 20px;
+color: white;
+font-size: 40px;
+text-align: center;
+
 }
