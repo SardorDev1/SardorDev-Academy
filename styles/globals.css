@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  transition: .8s ease;
+  text-decoration: none !important;
+}
+
+body {
+
+  overflow-x: hidden;
+
+}
+
+
+.col-lg-6 .Logo {
+  margin-top: 50px;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.btn1 {
+  margin-right: 10px;
+}
+
+.col-lg-6 .navbar {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.col-lg-6 .navbar li {
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.col-lg-6 .navbar li a {
+  color: white;
+  font-size: 14px;
+}
+
+.navs {
+  width: 100%;
+  height: 80px;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #6060d7, #7678e2, #9397f0);
+  display: flex;
+  margin-top: 45px;
+  justify-content: space-around;
+}
+#dark .navs {
+  width: 100%;
+  height: 80px;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #000000, #252525, #000000);
+  display: flex;
+  margin-top: 45px;
+  justify-content: space-around;
+}
+
+.white {
+  color: white !important;
+}
+
+.navbarsign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+
+}
+
+.signLink {
+  margin-left: 15px;
+
+}
+
+.signBtn {
+  border: 2px solid #ffffff !important;
+}
+
+.btn1:hover {
+  border: 2px solid #0048ff !important;
+  background-color: #0048ff !important;
+}
+
+.btn2:hover {
+  border: 2px solid #86a4f0 !important;
+  background-color: #f96244 !important;
+}
+
+.brand_name {
+  font-size: 20px;
+  font-family: 'Changa', sans-serif;
+  font-weight: 400;
+  margin-left: 10px;
+
+}
+
+.col-lg-6 .navbar li::after {
+  width: 60px;
+  height: 3px;
+  transition: .5s;
+  display: block;
+  border-radius: 10px;
+  content: "";
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  transform: translateX(-1000px);
+
+
+}
+
+.col-lg-6 .navbar li:hover::after {
+  transform: translateX(0px);
+
+  margin: auto;
+}
+
+.col-lg-6 .navbar li::before {
+  width: 60px;
+  height: 2px;
+  transition: .5s;
+  display: block;
+  border-radius: 10px;
+  content: "";
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  transform: translateX(1000px);
+
+
+}
+
+.col-lg-6 .navbar li:hover::before {
+  transform: translateX(0px);
+
+  margin: auto;
+}
+
+@media(max-width:992px) {
+  .col-lg-6 .Logo {
+    margin-left: 0px;
+
+    text-align: center;
+
+  }
+
+  .navs {
+    background: none;
+    justify-content: end !important;
+  }
+}
+
+.navbarBtn {
+  display: none;
+}
+
+@media(max-width:1400px) {
+  .navbarBtn {
+    display: flex !important;
+    margin-top: 20px;
+    justify-content: end !important;
+  }
+
+  .navs {
+    background: none;
+    justify-content: end !important;
+  }
+
+  .bar_active {
+
+    justify-content: center;
+  }
+
+  .navbar {
+    display: none !important;
+  }
+
+  .navbarsign {
+    display: none;
+
+  }
+}
+
+.barNav {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0%;
+  bottom: 0;
+  right: 0;
+  transition: .5s;
+  left: 0%;
+  display: none;
+  background-color: rgba(0, 0, 247, 0.426);
+  border-radius: 25px;
+}
+
+.active {
+  animation: zoom .3s forwards;
+  position: fixed;
+  display: block;
+  margin: auto;
+}
+
+.barNav .close {
+  position: absolute;
+  top: 5px;
+  color: white;
+  cursor: pointer;
+  right: 10px;
+}
+
+.barNav .ul {
+  padding-left: 0;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.barNav .ul li a {
+  color: white;
+  font-family: 'Changa', sans-serif;
+
+}
+
+
+.barNav .ul li {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  transition: .5s;
+  border-radius: 10px;
+
+}
+
+.barNav .ul li:hover {
+  width: 90%;
+  background-color: #0048ff;
+
+}
+
+@media(max-width:576px) {
+  .barNav {
+    width: 100%;
+    height: 100%;
+    transform: translateX(-1000px);
+    border-radius: 0px;
+
+  }
+
+  .active {
+    display: block;
+    transform: translateX(0px);
+    animation: leftfade .4s forwards;
+  }
+
+  .Logo {
+    margin: auto;
+    justify-content: center;
+  }
+
+  .navbarBtn {
+    display: flex !important;
+    font-size: 40px !important;
+    background-color: rgb(159, 159, 159);
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    margin: auto;
+    justify-content: center !important;
+  }
+}
+
+@keyframes leftfade {
+  0% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.btn1s {
+  border: 2px solid #ffffff !important;
+
+
+  width: 120px;
+  font-size: 12px !important;
+}
+
+.btn2s {
+  border: 2px solid #ffffff !important;
+  width: 120px;
+  display: flex;
+  margin: auto;
+  font-size: 12px !important;
+}
+
+.buttons {
+  padding-left: 0;
+  display: block;
+
+  justify-content: center;
+}
+
+.signLink {
+  margin: auto;
+}
+
+.container .row .col-lg-6 .content {
+  margin-top: 60px;
+
+}
+
+.container .row .col-lg-6 .content h3 {
+  font-size: 50px;
+  color: #464646;
+  font-family: 'Changa', sans-serif;
+
+}
+
+#dark .container .row .col-lg-6 .content h3 {
+
+  color: #d6d6d6;
+
+
+}
+
+.container .row .col-lg-6 .content h1 {
+  font-size: 80px;
+  color: #5e5ed7;
+  font-family: 'Changa', sans-serif;
+
+}
+
+#dark .container .row .col-lg-6 .content h1 {
+
+  color: #f5f5f5;
+
+
+}
+
+.container .row .col-lg-6 .content h2 {
+  font-size: 50px;
+  color: #464646;
+  font-family: 'Changa', sans-serif;
+
+}
+
+#dark .container .row .col-lg-6 .content h2 {
+  color: #e3e3e3;
+
+}
+
+.container .row .col-lg-6 .content p {
+  max-width: 420px;
+  font-family: 'Changa', sans-serif;
+  color: #7e7e80;
+
+}
+#dark .container .row .col-lg-6 .content p{
+  color: #f5f5f5;
+}
+
+.container .row .col-lg-6 .banner_img {
+  max-width: 460px;
+  max-height: 460px;
+  animation: imganimation 3s infinite linear;
+  margin-left: 100px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.BtnHome {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin-right: 25px;
+  margin-top: 30px;
+}
+
+
+@keyframes imganimation {
+  0% {
+    transform: translateY(30px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+
+
+.active {
+  z-index: 100;
+}
+
+@media(max-width:768px) {
+  .container .row .col-lg-6 .banner_img {
+
+    margin: auto !important;
+  }
+
+  .container .row .col-lg-6 .content {
+    text-align: center !important;
+  }
+
+  .container .row .col-lg-6 .content p {
+    max-width: none !important;
+    font-size: 2vmax !important;
+  }
+
+  .container .row .col-lg-6 .content h1 {
+    font-size: 6vmax !important;
+  }
+
+  .container .row .col-lg-6 .content h3 {
+    font-size: 3.5vmax !important;
+
+  }
+
+  .container .row .col-lg-6 .content h2 {
+    font-size: 4vmax !important;
+  }
+}
+
+@media(max-width:992px) {
+  .container .row .col-lg-6 .content h1 {
+    font-size: 3vmax;
+
+  }
+
+  .services_anim {
+    margin-top: 50px;
+  }
+
+  .service {
+    font-size: 50px !important;
+  }
+
+  .container .row .col-lg-6 .content h3 {
+    font-size: 2vmax;
+
+  }
+
+  .container .row .col-lg-6 .content h2 {
+    font-size: 2.2vmax;
+  }
+
+  .container .row .col-lg-6 .content p {
+    font-size: 1.2vmax;
+  }
+
+  .container .row .col-lg-6 .content .BtnHome {
+    max-width: 130px;
+    margin-bottom: 30px;
+  }
+}
+
+.service {
+  padding-top: 130px !important;
+  margin: auto;
+  color: #5e5ed7;
+  font-size: 100px;
+  font-family: 'Changa', sans-serif;
+  margin-bottom: 100px;
+
+
+}
+
+.container .row .col-lg-4 .wrap {
+  max-width: 360px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 30px;
+  border: 2px solid white;
+  box-shadow: 10px 10px 50px white;
+  margin-bottom: 100px;
+  font-family: 'Changa', sans-serif;
+
+}
+
+.container .row .col-lg-4 .wrap .icon {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  padding-top: 20px;
+  background-color: #5e5ed7;
+}
+
+.container .row .col-lg-4 .wrap .icon svg {
+  color: white;
+  font-size: 40px;
+}
+
+#services {
+  background-color: whitesmoke;
+}
+
+#dark #services {
+  background-color: rgb(36, 36, 36);
+}
+
+.container .row .col-lg-4 .wrap h2 {
+  font-size: 20px;
+  margin: 20px;
+  color: #535353;
+}
+
+.container .row .col-lg-4 .wrap p {
+  font-size: 16px;
+  color: #535353;
+  margin-bottom: 100px;
+}
+
+.container .row .col-lg-4 .wrap .icon:hover {
+
+
+  cursor: pointer;
+}
+#dark .container .row .col-lg-4 .wrap{
+  box-shadow: 0px 0px 20px rgb(77, 77, 77);
+  border: 0px solid white;
+
+}
+#dark .container .row .col-lg-4 .wrap h2 , p{
+color: white !important;
+
+} 
+.container .row .col-lg-4 .wrap:hover {
+  transform: translateY(-30px);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px silver;
+}
+
+.services_anim {
+  background-color: #0048ff;
+  color: white;
+  font-size: 20px;
+}
+
+#courses .wraps {
+  max-width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 30px;
+  padding: 10px;
+
+  border-radius: 10px;
+
+  display: flex;
+}
+
+.course_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.course_image {
+  max-width: 250px;
+  height: 240px;
+}
+
+#courses .kursdata {
+  margin: 20px;
+}
+
+#courses .wraps span {
+  color: #535353;
+
+  font-family: 'Changa', sans-serif;
+  font-weight: 400;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(101, 64, 251, 0.07);
+
+}
+
+#courses .wraps p {
+  font-size: 17px;
+  color: #464646;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+#courses .wraps .icons {
+  display: flex;
+  justify-content: start;
+}
+
+#courses .wraps .icons .icon p {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-left: 2px;
+}
+
+#courses .wraps .icons .icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+#courses .wraps .icons .icon {
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+
+#courses .wraps .buy span {
+  text-decoration: line-through !important;
+  background: none !important;
+}
+
+@media(max-width:992px) {
+  #courses .wraps {
+    display: block !important;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .kurstag {
+    font-size: 30px !important;
+    margin: 40px;
+
+  }
+
+  #courses .wraps .course_image {
+    max-width: 100% !important;
+  }
+}
+
+.kurstag {
+  font-size: 40px;
+  color: #5e5ed7;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  margin: 0;
+}
+
+#courses {
+  padding-bottom: 300px;
+}
+
+#courses .wraps:hover .course_image {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+#courses .wraps:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 10px gray;
+}
+
+.wraps .closes {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  border-radius: 100px;
+  top: 0;
+  transition: .4s ease;
+  left: 0;
+  opacity: 0;
+  background-color: whitesmoke;
+}
+#dark .wraps .closes {
+  background-color: rgb(66, 66, 66);
+}
+#dark #courses .wraps:hover{
+  box-shadow: 0px 0px 0px ;
+}
+.wraps .closes h1 {
+  text-align: center;
+  margin-top: 15%;
+  color: #0048ff;
+}
+
+.close_course:hover .closes {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  z-index: 1;
+  opacity: 1;
+}
+
+.text-reset {
+  font-weight: 400 !important;
+}
+
+.text-reset:hover {
+  transition: .0s !important;
+  color: #0048ff !important;
+}
+
+.modeicon {
+  margin-left: 20px;
+  position: absolute;
+  top: 5px;
+  right: 0px;
+}
+
+#mode {
+  border-radius: 0px !important;
+}
+
+#dark header .content {
+  color: white !important;
+}
+
+#dark header {
+  background-color: rgb(19, 19, 19);
+  background-image: none !important;
+}
+
+#dark header .Logo img {
+  border-radius: 10px;
+}
+
+#dark header .Logo {
+  color: rgb(232, 232, 232);
+}
+
+#dark .navbarBtn {
+  background-color: #464646;
+}
+
+.navbarBtn {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: #5e5ed7;
+}
+
+.navbarBtn:active {
+  transition: .1s !important;
+  font-size: 45px !important;
+}
+#dark #courses{
+  background-color: rgb(28, 28, 28);
+}
+#dark #courses .kursdata span{
+  color: white;
+}
+#dark #courses .kursdata svg{
+  color: white;
+}
+.col-lg-6 .content{
+  width: 800px;
+  height: 100%;
+margin-bottom: 300px;
+}
+.col-lg-6 nav{
+  width: 300px;
+}
+.navbar_dashboard{
+  max-width: 300px !important;
+  background-color: silver;
+}
