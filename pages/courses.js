@@ -17,7 +17,7 @@ export default function Courses() {
         </Fade>
         <div className="container">
           <div className="row">
-            <Fade bottom cascade>
+            
               <div className="col-lg-6 col-md-6 col-sm-12 ">
                 <div className="wraps ">
                   <div className="closes"></div>
@@ -45,7 +45,7 @@ export default function Courses() {
                 </div>
               </div>
 
-            </Fade>
+        
             <Fade bottom cascade>
               <div className="col-lg-6 col-md-6 col-sm-12 ">
                 <div className="wraps close_course ">

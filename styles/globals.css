@@ -553,7 +553,7 @@ body {
 
 }
 #dark .container .row .col-lg-4 .wrap h2 , p{
-color: white !important;
+color: white ;
 
 } 
 .container .row .col-lg-4 .wrap:hover {
@@ -733,7 +733,7 @@ color: white !important;
 }
 
 #dark header .content {
-  color: white !important;
+  color: white ;
 }
 
 #dark header {

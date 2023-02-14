@@ -1,10 +1,10 @@
 import Courses from '@/companents/Courses'
-import Footer from '@/companents/Footer'
+
 import Header from '@/companents/Header'
 import Services from '@/companents/Services'
 import styles from "../styles/Home.module.css"
 import Head from 'next/head'
-import { createContext, useState } from "react";
+import { createContext, useState } from "react";  
 
 import ReactSwitch from "react-switch";
 
@@ -20,6 +20,7 @@ export default function Home() {
   return (
 
     <>
+  
 
       <Head>
         <title>SardorDevs Academy</title>
@@ -30,7 +31,7 @@ export default function Home() {
 
 
       <>
-
+ 
 
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
 
@@ -121,7 +122,7 @@ export default function Home() {
               </label>
             </div>
 
-            <Services />
+            <Services/>
             <Courses />
 
           </section>
