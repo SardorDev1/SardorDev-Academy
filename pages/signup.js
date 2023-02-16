@@ -5,6 +5,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 export default function SignUp() {
     const [email, setEmail] = useState("")
+    const [username, setUsername] = useState()
     const [passwordOne, setPasswordOne] = useState("")  // birinchi parol inputi
     const [passwordTwo, setPasswordTwo] = useState("") // ikkinchi parol inputi
     const router = useRouter()
@@ -15,6 +16,7 @@ export default function SignUp() {
     const { createUserWithEmailAndPassword } = useAuth()
 
     const onSubmit = event => {
+        localStorage.setItem("username" , username)
         setError(null)
         if (passwordOne === passwordTwo)
             createUserWithEmailAndPassword(email, passwordOne)
@@ -35,6 +37,10 @@ export default function SignUp() {
         <>
             <div className='w-50 mb-5 mt-5' >
                 <form onSubmit={onSubmit} inline>
+                    <FormGroup>
+                        <Label for="exampleEmail" hidden>Foydalanuvchi Ismi</Label>
+                        <Input onChange={(e) => setUsername(e.target.value)} type="email" name="email" id="exampleEmail" placeholder="Email" />
+                    </FormGroup>
                     <FormGroup>
                         <Label for="exampleEmail" hidden>Email</Label>
                         <Input onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="exampleEmail" placeholder="Email" />
