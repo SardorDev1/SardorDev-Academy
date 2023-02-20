@@ -4,6 +4,8 @@ import '@/styles/globals.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import { AuthUserProvider } from '../companents/context/AuthUserContext'
 import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 export default function App({ Component, pageProps }) {
 
 
@@ -18,13 +20,25 @@ export default function App({ Component, pageProps }) {
 
 
   return (<>
-    {loading === true ? <h1>Loading</h1> : (
+    {loading === true ? (
       <>
-     <AuthUserProvider>
-     <Layout>
-          <Component {...pageProps} />
-        </Layout>
-     </AuthUserProvider>
+        <div className="preloader">
+          <div className="Loader">
+            <div className="loader">
+              <FontAwesomeIcon icon={faGraduationCap} />
+            </div>
+            <div className="h1">Yuklanmoqda</div>
+
+          </div>
+        </div>
+      </>
+    ) : (
+      <>
+        <AuthUserProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </AuthUserProvider>
       </>
     )}
 

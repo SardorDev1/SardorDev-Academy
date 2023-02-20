@@ -34,27 +34,27 @@ export default function Navbars() {
                         <FontAwesomeIcon width={40} height={40} className='navbarBtn' onClick={(e) => setBar(true)} icon={faBars} />
                         <ul className={"navbar"}>
                             <li className={"Link"}>
-                                <Link href={"/"}>Home</Link>
+                                <Link href={"/"}>Uyga</Link>
                             </li>
                             <li className={"Link"}>
-                                <Link href={"#"}>About</Link>
+                                <Link href={"/about"}>Biz Haqimizda</Link>
                             </li>
                             <li className={"Link"}>
-                                <Link href={"/courses"}>Courses</Link>
+                                <Link href={"/courses"}>Kurslar</Link>
                             </li>
                             <li className={"Link"}>
-                                <Link href={"#"}>Contact</Link>
+                                <Link href={"#"}>Aloqa</Link>
                             </li>
                         </ul>
                         <ul className="navbarsign">
                             <li className='signLink'>
                                 <button className=' signBtn btn btn1'>
-                                    <Link className='white' href={"#"}>Sign In</Link>
+                                    <Link className='white' href={"/login"}>Kirish</Link>
                                 </button>
                             </li>
                             <li className='signLink'>
                                 <button className='btn signBtn btn2 '>
-                                    <Link className='white' href={"#"}>Sign Up</Link>
+                                    <Link className='white' href={"/signup"}>Ro'yhatdan o'tish</Link>
                                 </button>
                             </li>
                         </ul>
@@ -71,16 +71,16 @@ export default function Navbars() {
                                 </>
                             ))}
                             <ul className='buttons'>
-                                <li className='signLink'>
+                                <div className='signLink'>
                                     <button className=' signBtn btn btn1s mx-auto'>
-                                        <Link className='white' href={"#"}>Sign In</Link>
+                                        <Link className='white' href={"/login"}>Kirish</Link>
                                     </button>
-                                </li>
-                                <li className='signLink'>
+                                </div>
+                                <div className='signLink'>
                                     <button className='btn signBtn btn2s mx-auto'>
-                                        <Link className='white' href={"#"}>Sign Up</Link>
+                                        <Link className='white' href={"/signup"}>Ro'yhatdan o'tish</Link>
                                     </button>
-                                </li>
+                                </div>
                             </ul>
                         </ul>
 

@@ -33,8 +33,8 @@ export default function Header() {
                   “SardorDevs Academy” dasturiga qo‘shiling – bizning ochiq onlayn-platformamizdagi ajoyib bepul kurslar yordamida ITga ilk qadamingizni qoying!!!
 
                 </p>
-                <button className='btn btn-primary BtnHome ' >Boshlash</button>
-                <button className='btn btn-primary BtnHome' >Kurslar</button>
+                <button className='btn btn-primary BtnHome ' ><Link className='links' href={"/signup"} >Boshlash</Link></button>
+                <button className='btn btn-primary BtnHome' ><Link className='links' href={"/login"} >Kurslar</Link></button>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 mx-auto ">
