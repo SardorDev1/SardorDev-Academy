@@ -3,7 +3,7 @@ import React, { lazy, useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 import { useAuth } from '@/companents/context/AuthUserContext';
 import Link from 'next/link';
-import Ibratlogo from "@/public/images/ibratlogo.jpg"
+import Ibratlogo from "@/public/images/ibratLogo.jpg"
 import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
