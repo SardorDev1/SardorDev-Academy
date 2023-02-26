@@ -592,7 +592,15 @@ p {
 
   display: flex;
 }
+#courses .wrapss {
+  max-width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 30px;
+  padding: 10px;
 
+  border-radius: 10px;
+
+}
 .course_img {
   width: 100%;
   height: 100%;
@@ -602,6 +610,13 @@ p {
 .course_image {
   max-width: 250px;
   height: 240px;
+}
+
+.wrapss .closes h1{
+  text-align: center;
+  transition: .5s !important;
+  margin-top: 40%;
+  align-items: center;
 }
 
 #courses .kursdata {
@@ -673,6 +688,7 @@ p {
   }
 }
 
+
 .kurstag {
   font-size: 40px;
   color: #5e5ed7;
@@ -695,7 +711,10 @@ p {
   cursor: pointer;
   box-shadow: 10px 10px 10px gray;
 }
-
+#courses .wrapss:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 10px gray;
+}
 .wraps .closes {
   width: 0%;
   height: 0%;
@@ -707,11 +726,23 @@ p {
   opacity: 0;
   background-color: whitesmoke;
 }
-
+.wrapss .closes {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  border-radius: 100px;
+  top: 0;
+  transition: .4s ease;
+  left: 0;
+  opacity: 0;
+  background-color: whitesmoke;
+}
 #dark .wraps .closes {
   background-color: rgb(66, 66, 66);
 }
-
+#dark .wrapss:hover .closes {
+  background-color: rgb(66, 66, 66);
+}
 #dark #courses .wraps:hover {
   box-shadow: 0px 0px 0px;
 }
@@ -1370,4 +1401,44 @@ width: 100%;
   font-family: 'Changa', sans-serif;
 text-align: center;
 font-size:20px;
+}
+.wrapss {
+  color: black !important;
+}
+.wrapss span {
+padding: 5px;
+  border-radius: 10px;
+margin: 0px 0px 10px 0px;
+background-color: rgb(239, 239, 239);
+}
+.wrapss p{
+  color:black !important;
+}
+.wrapss .price{
+background-color: none !important;
+  text-decoration:line-through !important;
+  background: none;
+}
+.wrapss .buy{
+display: flex;
+justify-content: space-between !important;
+}
+.wrapss .course_image{
+  max-width: 100%;
+  height: 100%;
+  margin: auto !important;
+}
+.wrapss .icon svg{
+margin-top: 5px;
+margin-right: 5px;
+}
+.ul_course b{
+  width: 120px !important;
+  font-size: 16px;
+
+  
+}
+.ul_course li{
+  margin: 10px;
+  text-align: start !important;
 }

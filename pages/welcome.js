@@ -8,7 +8,7 @@ import { faClose, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import { auth } from 'firebase';
 
-export default function welcome() {
+export default function Welcome() {
     const [navbar_active, setNavbar_active] = useState()
 
     const { authUser, loading, signOut } = useAuth()

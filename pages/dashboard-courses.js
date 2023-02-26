@@ -13,7 +13,8 @@ import {
   AccordionItem,
 } from 'reactstrap';
 import { auth } from 'firebase';
-export default function Dashboard(props) {
+import CoursesMenu from '@/companents/CoursesMenu';
+export default function Dashboard_courses(props) {
 
     const [open, setOpen] = useState('1');
     const toggle = (id) => {
@@ -110,12 +111,7 @@ export default function Dashboard(props) {
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mx-auto ">
                   <div className="content">
-                    <div className="video mx-auto">
-                      <iframe width="100%" height="400" src="https://www.youtube.com/embed/tzWggCnYVWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    </div>
-                    <div className="desc">
-                      <h1>Tavsilot</h1>
-                      <p>Darsda ishlatilgan codelar linki <a href="https://github.com/Sardordev1/">Shu yerda</a></p>
-                    </div>
+                  <CoursesMenu/>
                   </div>
                 </div>
               </div>

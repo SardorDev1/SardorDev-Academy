@@ -7,15 +7,19 @@ import Ibratlogo from "@/public/images/ibratlogo.jpg"
 import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
-import { Datas } from '@/companents/EnglishData';
+import { DataEnglish1 } from '../../companents/EnglishDatas/Data1';
+import {EnglishData2} from '../../companents/EnglishDatas/Data2';
+import { EnglishData3 } from '../../companents/EnglishDatas/Data3';
+import { EnglishData4 } from '../../companents/EnglishDatas/Data4';
 import {
     Accordion,
     AccordionBody,
     AccordionHeader,
+    Alert,
     AccordionItem,
 } from 'reactstrap';
 import { auth } from 'firebase';
-export default function dashboard(props) {
+export default function Coursess(props) {
     const [videolinks, setVideoLinks] = useState(``)
     const [open, setOpen] = useState('1');
     const toggle = (id) => {
@@ -103,13 +107,17 @@ export default function dashboard(props) {
                                             <aside>
                                                 <ul className='ul_course'>
                                                     <li><Link href={"/"} >Uyga</Link></li>
-                                                    <Accordion open={open} toggle={toggle}>
+                                                    <Accordion flush open={open} toggle={toggle}>
                                                         <AccordionItem>
-                                                            <AccordionHeader targetId="1">Birinchi Bo'lim</AccordionHeader>
+                                                            <AccordionHeader targetId="1">Birinchi Bo&apos;lim</AccordionHeader>
                                                             <AccordionBody accordionId="1">
-                                                                {Datas.map((video => (
+                                                                {DataEnglish1.map((video => (
                                                                     <>
-                                                                        <li key={video.id}><b onClick={(e) => setVideoLinks(video.videoID)} >{video.lesson}</b></li>
+                                                                        <li key={video.ID}>
+                                                                            <Alert color="dark" >
+                                                                                <b onClick={(e) => setVideoLinks(video.videoLink)} >1</b>
+                                                                            </Alert>
+                                                                        </li>
 
                                                                     </>
                                                                 )))}
@@ -119,8 +127,66 @@ export default function dashboard(props) {
                                                         </AccordionItem>
 
                                                     </Accordion>
+                                                    <Accordion flush open={open} toggle={toggle}>
+                                                        <AccordionItem>
+                                                            <AccordionHeader targetId="2">Birinchi Bo&apos;lim</AccordionHeader>
+                                                            <AccordionBody accordionId="2">
+                                                                {EnglishData3.map((video => (
+                                                                    <>
+                                                                        <li key={video.ID}>
+                                                                            <Alert color="dark" >
+                                                                                <b onClick={(e) => setVideoLinks(video.videoLink)} >1</b>
+                                                                            </Alert>
+                                                                        </li>
+
+                                                                    </>
+                                                                )))}
 
 
+                                                            </AccordionBody>
+                                                        </AccordionItem>
+
+                                                    </Accordion>
+                                                    <Accordion flush open={open} toggle={toggle}>
+                                                        <AccordionItem>
+                                                            <AccordionHeader targetId="3">Birinchi Bo&apos;lim</AccordionHeader>
+                                                            <AccordionBody accordionId="3">
+                                                                {EnglishData4.map((video => (
+                                                                    <>
+                                                                        <li key={video.ID}>
+                                                                            <Alert color="dark" >
+                                                                                <b onClick={(e) => setVideoLinks(video.videoLink)} >1</b>
+                                                                            </Alert>
+                                                                        </li>
+
+                                                                    </>
+                                                                )))}
+
+
+                                                            </AccordionBody>
+                                                        </AccordionItem>
+
+                                                    </Accordion>
+                                                    <Accordion flush open={open} toggle={toggle}>
+                                                        <AccordionItem>
+                                                            <AccordionHeader targetId="4">Birinchi Bo&apos;lim</AccordionHeader>
+                                                            <AccordionBody accordionId="4">
+                                                                {EnglishData2.map((video => (
+                                                                    <>
+                                                                        <li key={video.ID}>
+                                                                            <Alert color="dark" >
+                                                                                <b onClick={(e) => setVideoLinks(video.videoLink)} >1</b>
+                                                                            </Alert>
+                                                                        </li>
+
+                                                                    </>
+                                                                )))}
+
+
+                                                            </AccordionBody>
+                                                        </AccordionItem>
+
+                                                    </Accordion>
                                                 </ul>
                                             </aside>
                                         </nav>

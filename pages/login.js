@@ -48,9 +48,9 @@ alert(error.message)
 
 
                     <div className="btnSubmit mx-auto">
-                        <Button className='btn btn-success buttonSignUp mx-auto' type='submit'>Ro'yhatdan O'tish</Button>
+                        <Button className='btn btn-success buttonSignUp mx-auto' type='submit'>Ro&apos;yhatdan O&apos;tish</Button>
                     </div>
-                    <p className='toSignUp pb-5 pt-5'>Siz Ro'yhatdan O'tganmisiz? <Link href="/signup">Ro'yhatdan O'tishni Bosing</Link></p>
+                    <p className='toSignUp pb-5 pt-5'>Siz Ro&apos;yhatdan O&apos;tganmisiz? <Link href="/signup">Ro&apos;yhatdan O&apos;tishni Bosing</Link></p>
                 </form>
             </div>
         </section>

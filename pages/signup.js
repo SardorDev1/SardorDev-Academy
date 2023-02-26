@@ -7,14 +7,16 @@ import Navbars from '@/companents/Navbars';
 
 export default function SignUp() {
     const [email, setEmail] = useState("")
+    
     const [username, setUsername] = useState()
+    
     const [passwordOne, setPasswordOne] = useState("")  // birinchi parol inputi
+    
     const [passwordTwo, setPasswordTwo] = useState("") // ikkinchi parol inputi
+
     const router = useRouter()
+
     const [error, setError] = useState(null)
-
-
-
     const { createUserWithEmailAndPassword } = useAuth()
 
     const onSubmit = event => {
@@ -33,13 +35,11 @@ export default function SignUp() {
                     } else if (email === "" || username === "" || passwordOne === "" || passwordTwo === "") {
                         alert("Kerakli boshliqni toldirmadingiz!!!")
                     }
-                 
                 })
-
-
         else
             setError("Passwords don't match!")
             alert("Parol bilan Tasdiqlangan parol notog'ri")
+      
         event.preventDefault()
     }
 
@@ -52,7 +52,7 @@ export default function SignUp() {
 
                     <form onSubmit={onSubmit} >
                         <FormGroup>
-                            <h1 className='text-center pt-5 pl-5 pr-5' >Ro'yhatdan O'tish</h1>
+                            <h1 className='text-center pt-5 pl-5 pr-5' >Ro&apos;yhatdan O&apos;tish</h1>
                             <Label for="exampleEmail" hidden>Foydalanuvchi</Label>
                             <Input onChange={(e) => setUsername(e.target.value)} type="text" name="text" id="exampleEmail" placeholder="Ismingizni kiriting" />
                         </FormGroup>
@@ -71,9 +71,9 @@ export default function SignUp() {
                         </FormGroup>
                         {' '}
                         <div className="btnSubmit mx-auto">
-                            <Button className='btn btn-success buttonSignUp mx-auto' type='submit'>Ro'yhatdan O'tish</Button>
+                            <Button className='btn btn-success buttonSignUp mx-auto' type='submit'>Ro&apos;yhatdan O&apos;tish</Button>
                         </div>
-                        <p className='toLogin'>Siz Ro'yhatdan O'tganmisiz? <Link href="/login">Kirishni Bosing</Link></p>
+                        <p className='toLogin'>Siz Ro&apos;yhatdan O&apos;tganmisiz? <Link href="/login">Kirishni Bosing</Link></p>
                     </form>
                 </div>
             </section>

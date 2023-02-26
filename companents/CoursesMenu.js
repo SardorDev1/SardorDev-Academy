@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Fade } from "react-reveal"
 import Navbars from "@/companents/Navbars"
 
-export default function Courses() {
+export default function CoursesMenu() {
 
   return (
     <>
-  <Navbars/>
+
       <section id="courses">
         <Fade bottom cascade >
           <h1 className="text-center kurstag " >Boshlovchilar uchun <span>Foundation</span> kurslar</h1>
@@ -18,8 +18,8 @@ export default function Courses() {
         <div className="container">
           <div className="row">
             
-              <div className="col-lg-6 col-md-6 col-sm-12 ">
-                <div className="wraps ">
+              <div className="col-lg-6 col-md-12 col-sm-12 ">
+                <div className="wrapss ">
                   <div className="closes"></div>
                   <div className="course_image">
                     <Image className="course_img" src={EnglishCorse} alt="error image" loading="lazy" />
@@ -34,11 +34,11 @@ export default function Courses() {
                       </div>
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faChartSimple} />
-                        <p>Boshlang&apos;ich</p>
+                        <p>Boshlang'ich</p>
                       </div>
                     </div>
                     <div className="buy">
-                      <span >100 000 so&apos;m</span>
+                      <span className="price" >100 000 so'm</span>
                       <button className="btn btn-primary" >Bepul</button>
                     </div>
                   </div>
@@ -47,8 +47,8 @@ export default function Courses() {
 
         
             <Fade bottom cascade>
-              <div className="col-lg-6 col-md-6 col-sm-12 ">
-                <div className="wraps close_course ">
+              <div className="col-lg-6 col-md-12 col-sm-12 ">
+                <div className="wrapss close_course ">
                   <div className="closes">
                     <h1>Tez Kunda...</h1>
                    
@@ -67,11 +67,11 @@ export default function Courses() {
                       </div>
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faChartSimple} />
-                        <p>Boshlang&apos;ich</p>
+                        <p>Boshlang'ich</p>
                       </div>
                     </div>
                     <div className="buy">
-                      <span >100 000 so&apos;m</span>
+                      <span className="price"  >100 000 so'm</span>
                       <button className="btn btn-primary" >Bepul</button>
                     </div>
                   </div>
@@ -87,14 +87,14 @@ export default function Courses() {
       </section>
       <section id="courses" >
         <Fade bottom cascade >
-          <h1 className="text-center kurstag " >Dasturlashni <span>o&apos;rganmoqchilar</span> uchun</h1>
+          <h1 className="text-center kurstag " >Dasturlashni <span>o'rganmoqchilar</span> uchun</h1>
 
         </Fade>
         <div className="container">
           <div className="row">
             <Fade bottom cascade>
-              <div className="col-lg-6 col-md-6 col-sm-12 ">
-                <div className="wraps  close_course">
+              <div className="col-lg-6 col-md-12 col-sm-12 ">
+                <div className="wrapss  close_course">
                   <div className="closes">
                     <h1>Tez Kunda...</h1>
                   </div>
@@ -111,11 +111,11 @@ export default function Courses() {
                       </div>
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faChartSimple} />
-                        <p>Boshlang&apos;ich</p>
+                        <p>Boshlang'ich</p>
                       </div>
                     </div>
                     <div className="buy">
-                      <span >100 000 so&apos;m</span>
+                      <span className="price"  >100 000 so'm</span>
                       <button className="btn btn-primary" >Bepul</button>
                     </div>
                   </div>
@@ -124,8 +124,8 @@ export default function Courses() {
 
             </Fade>
             <Fade bottom cascade>
-              <div className="col-lg-6 col-md-6 col-sm-12 ">
-                <div className="wraps close_course">
+              <div className="col-lg-6 col-md-12 col-sm-12 ">
+                <div className="wrapss close_course">
                   <div className="closes">
                     <h1>Tez Kunda...</h1>
                   </div>
@@ -134,7 +134,7 @@ export default function Courses() {
                   </div>
                   <div className="kursdata"  >
                     <span>React Dasturlash</span>
-                    <p>Front-end dasturlashni yaxshi o&apos;zlashtirmoqchi bolsangiz ushbu kurs siz uchun  </p>
+                    <p>Front-end dasturlashni yaxshi o'zlashtirmoqchi bolsangiz ushbu kurs siz uchun  </p>
                     <div className="icons">
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faPlay} />
@@ -142,11 +142,11 @@ export default function Courses() {
                       </div>
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faChartSimple} />
-                        <p>Boshlang&apos;ich</p>
+                        <p>Boshlang'ich</p>
                       </div>
                     </div>
                     <div className="buy">
-                      <span >100 000 so&apos;m</span>
+                      <span className="price"  >100 000 so'm</span>
                       <button className="btn btn-primary" >Bepul</button>
                     </div>
                   </div>
@@ -155,8 +155,8 @@ export default function Courses() {
 
             </Fade>
             <Fade bottom cascade>
-              <div className="col-lg-6 col-md-6 col-sm-12 ">
-                <div className="wraps close_course">
+              <div className="col-lg-6 col-md-12 col-sm-12 ">
+                <div className="wrapss close_course">
                   <div className="closes">
                     <h1>Tez Kunda...</h1>
                   </div>
@@ -173,11 +173,11 @@ export default function Courses() {
                       </div>
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faChartSimple} />
-                        <p>Boshlang&apos;ich</p>
+                        <p>Boshlang'ich</p>
                       </div>
                     </div>
                     <div className="buy">
-                      <span >100 000 so&apos;m</span>
+                      <span className="price"  >100 000 so'm</span>
                       <button className="btn btn-primary" >Bepul</button>
                     </div>
                   </div>
@@ -186,8 +186,8 @@ export default function Courses() {
 
             </Fade>
             <Fade bottom cascade>
-              <div className="col-lg-6 col-md-6 col-sm-12 ">
-                <div className="wraps close_course">
+              <div className="col-lg-6 col-md-12 col-sm-12 ">
+                <div className="wrapss close_course">
                   <div className="closes">
                     <h1>Tez Kunda...</h1>
                   </div>
@@ -204,11 +204,11 @@ export default function Courses() {
                       </div>
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faChartSimple} />
-                        <p>Boshlang&apos;ich</p>
+                        <p>Boshlang'ich</p>
                       </div>
                     </div>
                     <div className="buy">
-                      <span >100 000 so&apos;m</span>
+                      <span className="price"  >100 000 so'm</span>
                       <button className="btn btn-primary" >Bepul</button>
                     </div>
                   </div>
