@@ -102,7 +102,7 @@ export default function Dashboard(props) {
                         <li><Link href={"/"} >Uyga</Link></li>
                         <li><Link href={"/about"} >Biz Haqimizda</Link></li>
                         <li><Link href={"/contact"} >Aloqa</Link></li>
-                        <li><Link href={"/content/english"} >Kurslar</Link></li>
+                        <li><Link href={"/dashboard-courses"} >Kurslar</Link></li>
                         
                       </ul>
                     </nav>

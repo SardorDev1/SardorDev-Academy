@@ -2,7 +2,7 @@ export const CouresData = [
     {
         id: 1,
         course: "Ingliz Tili (Boshlang'ich)",
-  
+
     },
     {
         id: 2,

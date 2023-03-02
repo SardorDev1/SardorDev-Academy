@@ -16,14 +16,14 @@ import { auth } from 'firebase';
 import CoursesMenu from '@/companents/CoursesMenu';
 export default function Dashboard_courses(props) {
 
-    const [open, setOpen] = useState('1');
-    const toggle = (id) => {
-      if (open === id) {
-        setOpen();
-      } else {
-        setOpen(id);
-      }
-    };
+  const [open, setOpen] = useState('1');
+  const toggle = (id) => {
+    if (open === id) {
+      setOpen();
+    } else {
+      setOpen(id);
+    }
+  };
 
 
   const [navbar_active, setNavbar_active] = useState()
@@ -69,9 +69,9 @@ export default function Dashboard_courses(props) {
               <div className="row">
                 <div className="Navbar_dashboard">
                   <nav className={navbar_active ? "navbar-nav navbar_active" : "navbar-nav"}>
-                  <button onClick={(e) => setNavbar_active(false)} className='closenavbar' >
-                        <FontAwesomeIcon icon={faClose} />
-                      </button>
+                    <button onClick={(e) => setNavbar_active(false)} className='closenavbar' >
+                      <FontAwesomeIcon icon={faClose} />
+                    </button>
                     <div className="account">
                       <div className="user_avatar">
                         <FontAwesomeIcon icon={faUser} />
@@ -80,12 +80,11 @@ export default function Dashboard_courses(props) {
                       <button className='btn btn-success' onClick={signOut} >Chiqish</button>
                     </div>
                     <ul className='ul_dashboard'>
-                     
-                      <li><Link href={"/Dashboard"} >Dashboard</Link></li>
-                      <li><Link href={"/Dashboard"} >Html</Link></li>
-                      <li><Link href={"/Dashboard"} >Css</Link></li>
-                      <li><Link href={"/Dashboard"} >Dashboard</Link></li>
-                      <li><Link href={"/Dashboard"} >Dashboard</Link></li>
+                      <li><Link href={"/dashboard"} >Uyga</Link></li>
+                      <li><Link href={"/about"} >Biz Haqimizda</Link></li>
+                      <li><Link href={"/contact"} >Aloqa</Link></li>
+                      <li><Link href={"/"} >Kurslar</Link></li>
+
                     </ul>
                   </nav>
                 </div>
@@ -100,18 +99,18 @@ export default function Dashboard_courses(props) {
                         <button className='btn btn-success' onClick={signOut} >Chiqish</button>
                       </div>
                       <ul className='ul_dashboard'>
-                        <li><Link href={"/"} >Uyga</Link></li>
+                        <li><Link href={"/dashboard"} >Uyga</Link></li>
                         <li><Link href={"/about"} >Biz Haqimizda</Link></li>
                         <li><Link href={"/contact"} >Aloqa</Link></li>
                         <li><Link href={"/content/english"} >Kurslar</Link></li>
-                        
+
                       </ul>
                     </nav>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mx-auto ">
                   <div className="content">
-                  <CoursesMenu/>
+                    <CoursesMenu />
                   </div>
                 </div>
               </div>

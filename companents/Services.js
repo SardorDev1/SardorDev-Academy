@@ -8,7 +8,7 @@ export default function Services() {
     return (
         <>
             <section id="services" >
-                <marquee behavior="" direction="" className="services_anim ">Bepul dasturlash darslari va loyihalar, algoritmlarni mustahkamlash uchun mashqlar. Tayyor shablonlar, shaxsiy profil portfolio va rezyume. JavaScriptga oid texnologiyalarni o'rganish.</marquee>
+                <marquee className="services_anim ">Bepul dasturlash darslari va loyihalar, algoritmlarni mustahkamlash uchun mashqlar. Tayyor shablonlar, shaxsiy profil portfolio va rezyume. JavaScriptga oid texnologiyalarni o'rganish.</marquee>
 
                 <>
 
