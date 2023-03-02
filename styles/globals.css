@@ -644,7 +644,7 @@ p {
 
 #courses .wraps .icons {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 #courses .wraps .icons .icon p {
@@ -1441,5 +1441,9 @@ margin-right: 5px;
 }
 .ul_course li{
   margin: 10px;
-  text-align: start !important;
+  text-align: flex-start !important;
+}
+.lessonref{
+  color: white !important;
+  font-size: 20px !important;
 }
