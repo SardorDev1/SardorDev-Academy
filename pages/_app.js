@@ -2,7 +2,7 @@
 import Layout from '@/companents/Layout'
 import '@/styles/globals.css'
 import "bootstrap/dist/css/bootstrap.min.css"
-import { ChakraProvider } from '@chakra-ui/react'
+
 import { AuthUserProvider } from '../companents/context/AuthUserContext'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
 
 
   return (<>
-    <ChakraProvider>
+
       {loading === true ? (
         <>
           <div className="preloader">
@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }) {
       )}
 
 
-    </ChakraProvider>
+
   </>)
 
 

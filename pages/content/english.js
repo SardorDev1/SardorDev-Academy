@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { lazy, useEffect, useState } from 'react';
+import React, { lazy, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router'
 import { useAuth } from '@/companents/context/AuthUserContext';
 import Link from 'next/link';
@@ -8,31 +8,21 @@ import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { DataEnglish1 } from '../../companents/EnglishDatas/Data1';
-import { EnglishData2 } from '../../companents/EnglishDatas/Data2';
-import { EnglishData3 } from '../../companents/EnglishDatas/Data3';
-import { EnglishData4 } from '../../companents/EnglishDatas/Data4';
+
 import { Alert } from 'reactstrap';
-import {
-    Accordion,
-    Box,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
-} from '@chakra-ui/react'
-import { auth } from 'firebase';
-export default function Coursess(props) {
-    const [videolinks, setVideoLinks] = useState(``)
 
-
+export default function Coursess() {
 
     const [navbar_active, setNavbar_active] = useState()
     const { authUser, loading, signOut } = useAuth()
     const router = useRouter()
+
     useEffect(() => {
+
+
         if (!loading && !authUser)
             router.push("/login")
-    }, [authUser, loading])
+    }, [])
     function ToggleNavbar() {
         setNavbar_active(!navbar_active)
     }
@@ -54,6 +44,8 @@ export default function Coursess(props) {
                 </>
             ) : (
                 <>
+
+
                     <div className="content">
                         <div className="account_info">
                             <div className="container">
@@ -61,7 +53,6 @@ export default function Coursess(props) {
                                     <div className="col-lg-12">
                                         <button className='Navbarbutton' onClick={ToggleNavbar}>Bar</button>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -80,12 +71,19 @@ export default function Coursess(props) {
                                             <button className='btn btn-success' onClick={signOut} >Chiqish</button>
                                         </div>
                                         <ul className='ul_course'>
-
                                             <li><Link href={"/Dashboard"} >Dashboard</Link></li>
-                                            <li><Link href={"/Dashboard"} >Html</Link></li>
-                                            <li><Link href={"/Dashboard"} >Css</Link></li>
-                                            <li><Link href={"/Dashboard"} >Dashboard</Link></li>
-                                            <li><Link href={"/Dashboard"} >Dashboard</Link></li>
+                                            <ul className='ul_course'>
+                                                <li><Link href={"/"} >Uyga</Link></li>
+                                                {DataEnglish1.map((video => (
+                                                    <>
+                                                        <li key={video.videoLink}>
+                                                            <Alert color="dark" >
+                                                                <b onClick={(e) => setVideoLinks(video.videoLink)}  ><span></span> {video.videoTitle}</b>
+                                                            </Alert>
+                                                        </li>
+                                                    </>
+                                                )))}
+                                            </ul>
                                         </ul>
                                     </nav>
                                 </div>
@@ -99,143 +97,30 @@ export default function Coursess(props) {
                                                 <h1 className='mt-3 mb-3'>{localStorage.getItem("username")}</h1>
                                                 <button className='btn btn-success' onClick={signOut} >Chiqish</button>
                                             </div>
-                                            <aside>
-                                                <ul className='ul_course'>
-                                                    <li><Link href={"/"} >Uyga</Link></li>
-                                                    <Accordion>
-                                                        <AccordionItem>
-                                                            <h2>
-                                                                <AccordionButton>
-                                                                    <Box as="span" flex='1' textAlign='left'>
-                                                                        Section 1 title
-                                                                    </Box>
-                                                                    <AccordionIcon />
-                                                                </AccordionButton>
-                                                            </h2>
-                                                            <AccordionPanel pb={4}>
-                                                                {DataEnglish1.map((video => (
-                                                                    <>
-                                                                        <li key={video.ID}>
-                                                                            <Alert color="dark" >
-                                                                                <b onClick={(e) => setVideoLinks(video.videoLink)} >1</b>
-                                                                            </Alert>
-                                                                        </li>
-
-                                                                    </>
-                                                                )))}
-                                                            </AccordionPanel>
-                                                        </AccordionItem>
-
-
-                                                    </Accordion>
-                                                    <Accordion>
-                                                        <AccordionItem>
-                                                            <h2>
-                                                                <AccordionButton>
-                                                                    <Box as="span" flex='1' textAlign='left'>
-                                                                        Section 1 title
-                                                                    </Box>
-                                                                    <AccordionIcon />
-                                                                </AccordionButton>
-                                                            </h2>
-                                                            <AccordionPanel pb={4}>
-                                                                {EnglishData2.map((video => (
-                                                                    <>
-                                                                        <li key={video.ID}>
-                                                                            <Alert color="dark" >
-                                                                                <b onClick={(e) => setVideoLinks(video.videoLink)} >1</b>
-                                                                            </Alert>
-                                                                        </li>
-
-                                                                    </>
-                                                                )))}
-                                                            </AccordionPanel>
-                                                        </AccordionItem>
-
-
-                                                    </Accordion>
-                                                    <Accordion>
-                                                        <AccordionItem>
-                                                            <h2>
-                                                                <AccordionButton>
-                                                                    <Box as="span" flex='1' textAlign='left'>
-                                                                        Section 1 title
-                                                                    </Box>
-                                                                    <AccordionIcon />
-                                                                </AccordionButton>
-                                                            </h2>
-                                                            <AccordionPanel pb={4}>
-                                                                {EnglishData3.map((video => (
-                                                                    <>
-                                                                        <li key={video.ID}>
-                                                                            <Alert color="dark" >
-                                                                                <b onClick={(e) => setVideoLinks(video.videoLink)} >1</b>
-                                                                            </Alert>
-                                                                        </li>
-
-                                                                    </>
-                                                                )))}
-                                                            </AccordionPanel>
-                                                        </AccordionItem>
-
-
-                                                    </Accordion>
-                                                    <Accordion>
-                                                        <AccordionItem>
-                                                            <h2>
-                                                                <AccordionButton>
-                                                                    <Box as="span" flex='1' textAlign='left'>
-                                                                        Section 1 title
-                                                                    </Box>
-                                                                    <AccordionIcon />
-                                                                </AccordionButton>
-                                                            </h2>
-                                                            <AccordionPanel pb={4}>
-                                                                {EnglishData4.map((video => (
-                                                                    <>
-                                                                        <li key={video.ID}>
-                                                                            <Alert color="dark" >
-                                                                                <b onClick={(e) => setVideoLinks(video.videoLink)} >1</b>
-                                                                            </Alert>
-                                                                        </li>
-
-                                                                    </>
-                                                                )))}
-                                                            </AccordionPanel>
-                                                        </AccordionItem>
-
-
-                                                    </Accordion>
-                                                
-                                                </ul>
-                                            </aside>
+                                            <ul className='ul_course'>
+                                                <li><Link href={"/"} >Uyga</Link></li>
+                                                {DataEnglish1.map((video => (
+                                                    <>
+                                                        <li key={video.videoLink}>
+                                                            <Alert color="dark" >
+                                                                <b  ><span>#{video.ID} </span> {video.videoTitle}</b>
+                                                            </Alert>
+                                                        </li>
+                                                    </>
+                                                )))}
+                                            </ul>
                                         </nav>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 col-sm-6 mx-auto ">
-                                    <div className="content">
-                                        <div className="video mx-auto">
-                                            <iframe width="100%" height="400" src={videolinks} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    </div>
-                                        <div className="desc">
-                                            <h1 className='desch1'>Manba</h1>
-                                            <div className="source">
 
-                                                <div className="channel">
-                                                    <Image width={200} height={200} loading="lazy" src={Ibratlogo} alt="" />
-                                                    <div className='tags'>
-                                                        <h2>Ibrat Farzandlari</h2>
-                                                        <button className='btn btn-primary' ><FontAwesomeIcon icon={faSearch} /> VIEW</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </>
-            )}
+            )
+            }
 
         </>
     )

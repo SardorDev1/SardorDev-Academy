@@ -4,6 +4,7 @@ import { faChartSimple, faPlay } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Fade } from "react-reveal"
 import Navbars from "@/companents/Navbars"
+import Link from "next/link"
 
 export default function CoursesMenu() {
 
@@ -17,43 +18,43 @@ export default function CoursesMenu() {
         </Fade>
         <div className="container">
           <div className="row">
-            
-              <div className="col-lg-6 col-md-12 col-sm-12 ">
-                <div className="wrapss ">
-                  <div className="closes"></div>
-                  <div className="course_image">
-                    <Image className="course_img" src={EnglishCorse} alt="error image" loading="lazy" />
+
+            <div className="col-lg-6 col-md-12 col-sm-12 ">
+              <div className="wrapss ">
+                <div className="closes"></div>
+                <div className="course_image">
+                  <Image className="course_img" src={EnglishCorse} alt="error image" loading="lazy" />
+                </div>
+                <div className="kursdata"  >
+                  <span>Ingliz tili</span>
+                  <p>Ushbu kursda ingiliz tili konikmalarini tekin organasiz</p>
+                  <div className="icons">
+                    <div className="icon d-flex">
+                      <FontAwesomeIcon icon={faPlay} />
+                      <p>100ta darslar</p>
+                    </div>
+                    <div className="icon d-flex">
+                      <FontAwesomeIcon icon={faChartSimple} />
+                      <p>Boshlang'ich</p>
+                    </div>
                   </div>
-                  <div className="kursdata"  >
-                    <span>Ingliz tili</span>
-                    <p>Ushbu kursda ingiliz tili konikmalarini tekin organasiz</p>
-                    <div className="icons">
-                      <div className="icon d-flex">
-                        <FontAwesomeIcon icon={faPlay} />
-                        <p>100ta darslar</p>
-                      </div>
-                      <div className="icon d-flex">
-                        <FontAwesomeIcon icon={faChartSimple} />
-                        <p>Boshlang'ich</p>
-                      </div>
-                    </div>
-                    <div className="buy">
-                      <span className="price" >100 000 so'm</span>
-                      <button className="btn btn-primary" >Bepul</button>
-                    </div>
+                  <div className="buy">
+                    <span className="price" >100 000 so'm</span>
+                    <button className="btn btn-primary" ><Link href={"/content/english"} >Bepul</Link></button>
                   </div>
                 </div>
               </div>
+            </div>
 
-        
+
             <Fade bottom cascade>
               <div className="col-lg-6 col-md-12 col-sm-12 ">
                 <div className="wrapss close_course ">
                   <div className="closes">
                     <h1>Tez Kunda...</h1>
-                   
+
                   </div>
-               
+
                   <div className="course_image">
                     <Image className="course_img" src={EnglishCorse} alt="error image" loading="lazy" />
                   </div>
@@ -201,7 +202,7 @@ export default function CoursesMenu() {
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faPlay} />
                         <p>100ta darslar</p>
-                      </div>
+                      </div>  
                       <div className="icon d-flex">
                         <FontAwesomeIcon icon={faChartSimple} />
                         <p>Boshlang'ich</p>

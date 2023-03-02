@@ -6,12 +6,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-import {
-  Accordion,
-  AccordionBody,
-  AccordionHeader,
-  AccordionItem,
-} from 'reactstrap';
+
 import { auth } from 'firebase';
 export default function Dashboard(props) {
 

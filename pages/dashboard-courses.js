@@ -30,9 +30,10 @@ export default function Dashboard_courses(props) {
   const { authUser, loading, signOut } = useAuth()
   const router = useRouter()
   useEffect(() => {
+
     if (!loading && !authUser)
       router.push("/login")
-  }, [authUser, loading])
+  },  [])
   function ToggleNavbar() {
     setNavbar_active(!navbar_active)
   }
