@@ -40,7 +40,7 @@ export default function CoursesMenu() {
                   </div>
                   <div className="buy">
                     <span className="price" >100 000 so'm</span>
-                    <button className="btn btn-primary" ><Link href={"/content/english"} >Bepul</Link></button>
+                    <button className="btn btn-primary" ><Link className="white" href={"/content/english"} >Bepul</Link></button>
                   </div>
                 </div>
               </div>
