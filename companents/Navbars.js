@@ -43,7 +43,7 @@ export default function Navbars() {
                                 <Link href={"/courses"}>Kurslar</Link>
                             </li>
                             <li className={"Link"}>
-                                <Link href={"#"}>Aloqa</Link>
+                                <Link href={"/contact"}>Aloqa</Link>
                             </li>
                         </ul>
                         <ul className="navbarsign">

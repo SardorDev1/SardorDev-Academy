@@ -94,7 +94,7 @@ export default function Footer() {
                         </MDBCol>
 
                         <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-                            <Fade bottom>  <h6 className='text-uppercase fw-bold mb-4'>Aloqa</h6></Fade>
+                            <h6 className='text-uppercase fw-bold mb-4'>Aloqa</h6>
 
                             <p>
                                 <MDBIcon icon="home" className="me-2" />
